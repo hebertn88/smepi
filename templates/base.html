@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
-<body>
+<body class="bg-light">
     <!-- HEADER -->
     <div class="container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -35,7 +35,7 @@
     <!-- FIM READER -->
     
     <!-- CONTENT -->
-    <div class="container">
+    <div class="container-lg">
       {% block content %}
       {% endblock %}
     </div>
