@@ -5,7 +5,4 @@ class SetorEditForm(forms.ModelForm):
     class Meta:
         model = Setor
 
-        fields = [
-            'descricao'
-        ]
-
+        fields = ['descricao']

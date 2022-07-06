@@ -1,14 +1,24 @@
-from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponse
+from django.utils import timezone
+from django.views.generic.edit import CreateView
+from django.views.generic.list import ListView
+
 from .models import Setor
 from .forms import SetorEditForm
 
 # Create your views here.
-def setores(request):
-    context = {
-        'setores' : Setor.objects.all()}
-    return render(request, 'setor/setores.html', context)
+
+class SetorCreateView(CreateView):
+    model = Setor
+    fields = ['descricao']
+
+class SetorListView(ListView):
+    model = Setor
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
 
 
 def edit_setor(request, id):

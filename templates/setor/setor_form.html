@@ -11,16 +11,16 @@
             </tr>
         </thead>
         <tbody>
-            {% for setor in setores %}
+            {% for setor in object_list %}
                 <tr>
                     <td>{{setor.id}}</td>
                     <td>{{setor.descricao}}</td>
                     <td>
-                        <a class="btn btn-outline-primary btn-sm" href="{% url 'edit_setor' setor.id %}" role="button" title="Editar">
-                            <i class="fa-solid fa-pen"></i> Editar
+                        <a class="btn btn-outline-primary btn-sm" href="#" role="button" title="Editar">
+                            <i class="fa-solid fa-pen"></i>
                         </a>
                         <a class="btn btn-outline-danger btn-sm" href="#" role="button" title="Excluir">
-                            <i class="fa-solid fa-trash"></i> Excluir
+                            <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>
                 </tr>
